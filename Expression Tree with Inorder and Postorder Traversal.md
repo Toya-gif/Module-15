@@ -20,10 +20,18 @@ To write a Python program to build the given expression tree and print the inord
 
 ```
 WRITE YOUR CODE
+from binarytree import build
+s=['*','+','-',9,3,8,4]
+t=build(s)
+print(t.inorder)
+print(t.postorder)
 ```
 
 ## OUTPUT
 ```
 ```
+![image](https://github.com/user-attachments/assets/50762288-c447-46b0-9ac1-24472b84497a)
+
 
 ## RESULT
+Thus the program is done and verified.
