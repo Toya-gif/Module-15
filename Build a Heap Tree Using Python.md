@@ -19,11 +19,21 @@ To write a Python program to build a heap tree using appropriate Python package 
 ## PROGRAM:
 
 ```
+import heapq
+def heapoprn(li):
+    heapq.heapify(li)
+    print ("The created heap is : ",li)
+    
+    print ("The popped and smallest element is : ",end="")
+    print (heapq.heappop(li))
 WRITE YOUR CODE
 ```
 
 ## OUTPUT
 ```
 ```
+![image](https://github.com/user-attachments/assets/28b10525-8cd2-4605-93a0-56dd25394d4a)
+
 
 ## RESULT
+Thus the program is done and verified.
