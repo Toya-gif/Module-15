@@ -1,40 +1,29 @@
-# Ex. No: 15A - Build a Binary Tree with Float Values
+# Ex. No: 15D - Build a Heap Tree Using Python
 
 ## AIM:
-To write a Python program to build a binary tree with a root, left, and right node using floating-point values.
-
----
+To write a Python program to build a heap tree using appropriate Python package and function.
 
 ## ALGORITHM:
 
-1. **Start the program.**
-2. **Import** the `Node` class from the `binarytree` module.
-3. **Create a root node** using the `Node` class and assign a floating-point value.
-4. **Create left and right child nodes** for the root with float values.
-5. **Convert the tree** to a list and print the list of nodes.
-6. **End the program.**
+1. *Start the program.*
+2. Import the heapq module.
+3. Define a function heaptree(H) that takes a list H as input.
+4. Use heapq.heapify(H) to convert the list into a min-heap.
+5. Print the created heap.
+6. *End the program.*
 
----
+## PROGRAM:
 
-## PYTHON PROGRAM
+import heapq
 
-```
-from binarytree import Node 
-l=[]
-for i in range(3):
-    n=input()
-    l.append(n)
-root=Node(l[0])
-root.left=Node(l[1])
-root.right=Node(l[2])
-print(f"List of nodes : {list(root)}")
-E.Toya Talyna
-212223060292
-```
+def heaptree(H):
+
+    heapq.heapify(H)
+    print("The created Heap is",H)
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/a1c963d6-a18e-4c1e-b3b4-661498e03a9d)
+![image](https://github.com/user-attachments/assets/e8ef92c0-a81a-4799-8eaa-f0f2eb51e9cd)![image](https://github.com/user-attachments/assets/69e5f023-3fb2-4ecc-bb71-5f4fec5cb8e7)
 
 
 ## RESULT
-Thus the program is done and verified.
+Thus, a Python program to build a heap tree using appropriate Python package and function was implemented successfully.
