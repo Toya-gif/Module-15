@@ -1,79 +1,54 @@
-# Ex. No: 15E - Build and Evaluate an Expression Tree
+# Ex. No: 15A - Debug a Python function to build a Binary tree.
+1. Use appropriate Package and build module to build a tree
+
+2. Define def buildtree(L): to build a binary tree
+
+2. Print the Maximum and minimum leaf depths of the binary tree.
 
 ## AIM:
-To write a Python program to build and evaluate the given Expression tree.
-
----
+To write a Python program to build a binary tree with a Maximum and minimum leaf depths of the binary tree.
 
 ## ALGORITHM:
 
-1. **Start the program.**
-2. Create nodes for operators and operands.
-3. Build the expression tree by connecting nodes in the correct hierarchical structure.
-4. Define a recursive function `evaluate(root)`:
-   - If the node is a number (leaf), return it.
-   - Else, recursively evaluate left and right subtrees.
-   - Apply the operator at the current node to the results.
-5. Return the final result from the root node.
-6. **End the program.**
+Input Assignment:
+Assign the input list L to a variable x.
 
----
+Tree Construction:
+Use build(x) from the binarytree module to construct a binary tree r from the list x.
 
-## PROGRAM:
+Display Tree in Level Order:
 
-```
-WRITE YOUR CODE
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
- 
+Print "Binary tree:"
 
-def isLeaf(node):
-    return node.left is None and node.right is None
- 
-def process(op, x, y):
-    if op == '+':
-        return x + y
-    if op == '-':
-        return x - y
-    if op == '*':
-        return x * y
-    if op == '/':
-        return x / y
- 
-def evaluate(root):
+Loop through each value i in r.values (level-order list of node values).
 
-    if root is None:
-        return 0
-  
-    if isLeaf(root):
-        return float(root.val)
-    
-    x = evaluate(root.left)
-    y = evaluate(root.right)
-    return (process(root.val, x, y))
-    
+For each value, print it followed by " -->", keeping output on the same line.
+
+Print Maximum Leaf Depth:
+
+Print r.max_leaf_depth, which gives the maximum depth among all leaf nodes.
+
+Print Minimum Leaf Depth:
+
+Print r.min_leaf_depth, which gives the minimum depth among all leaf nodes.
 
 
-root = Node('*')
-root.left = Node('+')
-root.right = Node('+')
-root.left.left = Node('7')
-root.left.right = Node('6')
-root.right.left =Node('2')
-root.right.right =Node('6')
+## PYTHON PROGRAM
 
- 
-print('The value of the expression tree is',evaluate(root))
-```
+from binarytree import Node, build
 
-## OUTPUT:
-```
-```
-![image](https://github.com/user-attachments/assets/5a797f53-d651-4919-8ac7-fb512e0dd13d)
+def buildtree(L):
 
+    x=L
+    r=build(x)
+    print("Binary tree:")
+    for i in r.values:
+        print(i,"-->",end='')
+    print("\nMaximum leaf depth:", r.max_leaf_depth)
+    print("\nMinimum leaf depth:", r.min_leaf_depth)
+        
+## OUTPUT
+![image](https://github.com/user-attachments/assets/96da7a20-f9fc-4dd6-b98d-92c087541ef4)![image](https://github.com/user-attachments/assets/835dac31-fc6f-4025-b6bd-402c39d6c0b1)
 
-## RESULT:
-Thus the program is done and verified.
+## RESULT
+Thus, a Python program to build a binary tree with a Maximum and minimum leaf depths of the binary tree was implemented successfully.
